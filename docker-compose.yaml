@@ -1,0 +1,14 @@
+version: "3"
+services:
+  frontend:
+    container_name: client
+    build:
+      dockerfile: Dockerfile
+    image: react
+    ports:
+      - "2000:2000"
+    networks:
+      - docker-network
+networks:
+  docker-network:
+    driver: bridge
